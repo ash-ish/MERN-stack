@@ -46,6 +46,7 @@ function makeSound(key){
     }
 }
 
+//adding shadow and removing it in 0.1 sec on the buttons
 function buttonAnimation(key){
     var currentButton = document.querySelector("." + key);
     currentButton.classList.add("pressed");
