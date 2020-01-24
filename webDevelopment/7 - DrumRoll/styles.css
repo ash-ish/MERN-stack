@@ -44,6 +44,11 @@ footer {
   background: url("images/kick.png");
 }
 
+.pressed{
+  box-shadow: 0 3px 4px 0 #dbedf3;
+  opacity: 0.5;
+}
+
 .set {
   margin: 10% auto;
 }

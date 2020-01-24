@@ -4,12 +4,14 @@ var totalDrums = document.querySelectorAll(".drum").length;
 for(var i = 0;i<totalDrums;i++){
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
         makeSound(this.innerHTML);
+        buttonAnimation(this.innerHTML);
     });
 }
 
 //detecting keybutton click
 document.addEventListener("keydown",function(event){
     makeSound(event.key);
+    buttonAnimation(event.key);
 })
 
 // making sound according to the key pressed
@@ -42,4 +44,12 @@ function makeSound(key){
         var tom7 = new Audio("sounds/kick-bass.mp3");
         tom7.play();
     }
+}
+
+function buttonAnimation(key){
+    var currentButton = document.querySelector("." + key);
+    currentButton.classList.add("pressed");
+    setTimeout(function(){
+        currentButton.classList.remove("pressed");
+    },100);
 }
