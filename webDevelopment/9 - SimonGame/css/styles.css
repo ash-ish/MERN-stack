@@ -3,6 +3,10 @@ body{
     background-color: #011F3F;
 }
 
+.bg-red{
+    background-color: red;
+}
+
 h1{
     margin: 5%;
     font-size: 3rem;
