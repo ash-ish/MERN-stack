@@ -10,14 +10,14 @@ app.get("/", function(req, res){
 });
 
 app.get("/bmicalculator", function(req, res){
-    res.sendFile(__dirname + "/bmiCalculator");
+    res.sendFile(__dirname + "/bmiCalculator.html");
 });
 
-app.post("/bmiCalculator", function(req,res){
+app.post("/bmicalculator", function(req,res){
     var height = Number(req.body.height);
     var weight = Number(req.body.weight);
 
-    req.send("your BMI ius - " + (weight*weight)/height);
+    res.send("your BMI is - " + ((weight*weight)/height));
 
 })
 
